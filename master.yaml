@@ -4,7 +4,7 @@ app:
   ports:
   - "5001:5000"
 
-db:
+mysql:
   image: mysql:5.7
   ports:
   - "3306:3306"
