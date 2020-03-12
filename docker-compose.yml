@@ -23,4 +23,12 @@ services:
     - 3306:3306
     volumes:
     - ./db:/docker-entrypoint-initdb.d/:ro
+  ui:
+    build: ./ui
+    depends_on:
+    - elasticsearch
+    - mysql
+    ports:
+    - 8081:8080
+    restart: on-failure
 version: '3'
