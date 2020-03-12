@@ -3,28 +3,24 @@ services:
     build: ./app
     depends_on:
     - elasticsearch
-    - db
+    - mysql
     ports:
     - 5001:5000
     restart: on-failure
-  db:
+  elasticsearch:
+    environment:
+    - discovery.type=single-node
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.0.0
+    ports:
+    - 9200:9200
+  mysql:
     environment:
       MYSQL_ROOT_PASSWORD: root
     healthcheck:
       test: mysql search -h 127.0.0.1 -u root --password=root
     image: mysql:5.7
-    logging:
-      driver: none
     ports:
     - 3306:3306
     volumes:
     - ./db:/docker-entrypoint-initdb.d/:ro
-  elasticsearch:
-    environment:
-    - discovery.type=single-node
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.0.0
-    logging:
-      driver: none
-    ports:
-    - 9200:9200
 version: '3'

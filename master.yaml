@@ -10,8 +10,6 @@ mysql:
   - "3306:3306"
   environment:
     MYSQL_ROOT_PASSWORD: root
-  logging:
-    driver: none
   volumes:
   - ./db:/docker-entrypoint-initdb.d/:ro
   healthcheck:
@@ -23,8 +21,6 @@ elasticsearch:
   - discovery.type=single-node
   ports:
   - "9200:9200"
-  logging:
-    driver: none
 
 #nginx:
 #  image: nginx:1.15-alpine
@@ -39,5 +35,3 @@ kibana:
   image: docker.elastic.co/kibana/kibana:7.0.0
   ports:
   - "5601:5601"
-  logging:
-    driver: none
