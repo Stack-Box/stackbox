@@ -1,10 +1,10 @@
-app:
-  build: ./app
+flask:
+  build: ./flask
   ports:
   - "80:80"
 
-ui:
-  build: ./ui
+vue:
+  build: ./vue
   restart: on-failure
   ports:
   - "8080:8080"

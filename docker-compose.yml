@@ -1,6 +1,6 @@
 services:
-  app:
-    build: ./app
+  flask:
+    build: ./flask
     depends_on:
     - mysql
     ports:
@@ -13,8 +13,8 @@ services:
     - 3306:3306
     volumes:
     - ./mysql:/docker-entrypoint-initdb.d/:ro
-  ui:
-    build: ./ui
+  vue:
+    build: ./vue
     depends_on:
     - mysql
     ports:

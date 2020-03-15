@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-from __future__ import print_function
 import yaml
 import sys
 
-# Map a Docker Compose "service" name to its image.
-CLIENTS = ['app', 'ui']
+# List of clients
+CLIENTS = ['flask', 'vue']
 
 # docker-compose.yml skeleton to fill out using "service" entries above.
 COMPOSITION = {'version': '3', 'services': {}}
@@ -14,13 +13,17 @@ if __name__ == '__main__':
 
     error_clients = []
     error_services = []
+    args = sys.argv[1:]
+
+    services = [x for x in args if x not in CLIENTS]
+    clients = [x for x in args if x in CLIENTS]
 
     # Loads the master yaml containing docker service definitions
     with open('./master.yaml') as master_service_file:
         master_services = yaml.load(master_service_file, Loader=yaml.FullLoader)
 
     # Populates clients in docker-compose
-    for client in CLIENTS:
+    for client in clients:
         if client in master_services:
             COMPOSITION['services'][client] = master_services[client]
             COMPOSITION['services'][client]['depends_on'] = []
@@ -29,9 +32,9 @@ if __name__ == '__main__':
             CLIENTS.remove(client)
 
     # Populates services requested by user
-    for service in sys.argv[1:]:
+    for service in services:
         if service in master_services:
-            for client in CLIENTS:
+            for client in clients:
                 COMPOSITION['services'][client]['depends_on'].append(service)
             COMPOSITION['services'][service] = master_services[service]
         else:

@@ -4,9 +4,9 @@
 docker-compose.yml
 logs/
 .DS_Store
-ui/node_modules/
-ui/dist/
-ui/npm-debug.log*
-ui/yarn-debug.log*
-ui/yarn-error.log*
-ui/test/unit/coverage/
+vue/node_modules/
+vue/dist/
+vue/npm-debug.log*
+vue/yarn-debug.log*
+vue/yarn-error.log*
+vue/test/unit/coverage/
