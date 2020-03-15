@@ -1,7 +1,7 @@
 # StackBox
 Create app stacks loaded with all your favourite clients, services and infra in under 5 mins.
 
-![Screenshot](https://drive.google.com/uc?export=view&id=1OgAQJPzkK-QDVlinGGbmSQrb6jEFvZnc)
+![Screenshot](https://ik.imagekit.io/sn5/Webp.net-resizeimage_MC8zaRvlY.png)
 
 ## Run
 
