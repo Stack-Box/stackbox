@@ -1,9 +1,14 @@
 # StackBox
-Create a Flask-Vue App loaded with all your favourite clients in under 5 mins.
+Create app stacks loaded with all your favourite clients, services and infra in under 5 mins.
 
-## Stack up services
+## Run
 
-    sh stack.sh <service-name-1> <service-name-2> ...
+    sh stack.sh <client-name-1> <client-name-2> <service-name-1> <service-name-2> ...
+    
+## Supported Clients
+
+- vue
+- flask
 
 ## Supported Services
 
