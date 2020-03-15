@@ -1,0 +1,7 @@
+MYSQL:
+  USERNAME: root
+  PASSWORD: root
+  DB_NAME: stackbox
+  HOST: mysql
+  PORT: 3306
+

@@ -1,14 +1,13 @@
 app:
   build: ./app
-  restart: on-failure
   ports:
-  - "5001:5000"
+  - "80:80"
 
 ui:
   build: ./ui
   restart: on-failure
   ports:
-  - "8081:8080"
+  - "8080:8080"
 
 mysql:
   image: mysql:5.7
@@ -17,9 +16,7 @@ mysql:
   environment:
     MYSQL_ROOT_PASSWORD: root
   volumes:
-  - ./db:/docker-entrypoint-initdb.d/:ro
-  healthcheck:
-    test: mysql search -h 127.0.0.1 -u root --password=root
+  - ./mysql:/docker-entrypoint-initdb.d/:ro
 
 elasticsearch:
   image: docker.elastic.co/elasticsearch/elasticsearch:7.0.0
