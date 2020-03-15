@@ -1,8 +1,15 @@
 services:
+  elasticsearch:
+    environment:
+    - discovery.type=single-node
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.0.0
+    ports:
+    - 9200:9200
   flask:
     build: ./flask
     depends_on:
     - mysql
+    - elasticsearch
     ports:
     - 80:80
   mysql:
@@ -17,6 +24,7 @@ services:
     build: ./vue
     depends_on:
     - mysql
+    - elasticsearch
     ports:
     - 8080:8080
     restart: on-failure

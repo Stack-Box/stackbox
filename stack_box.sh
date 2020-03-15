@@ -40,7 +40,7 @@ do
     if beginswith "stackbox" "$container";
     then
       tmp=${container%"_1"}
-      echo ${tmp#"stackbox_"} is up at localhost:${service_ports[i]}
+      echo ${tmp#"stackbox_"} is up at http://localhost:${service_ports[i]}
     fi
   fi
 done
