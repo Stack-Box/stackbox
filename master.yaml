@@ -16,7 +16,7 @@ mysql:
   environment:
     MYSQL_ROOT_PASSWORD: root
   volumes:
-  - ./mysql:/docker-entrypoint-initdb.d/:ro
+  - ./volumes/mysql:/docker-entrypoint-initdb.d/:ro
 
 elasticsearch:
   image: docker.elastic.co/elasticsearch/elasticsearch:7.0.0
@@ -25,14 +25,13 @@ elasticsearch:
   ports:
   - "9200:9200"
 
-#nginx:
-#  image: nginx:1.15-alpine
-#  depends_on:
-#  - app
-#  ports:
-#  - "80:80"
-#  volumes:
-#  - ./data/nginx:/etc/nginx/conf.d
+nginx:
+  image: nginx:1.15-alpine
+  ports:
+  - "81:80"
+  volumes:
+  #- ./volumes/nginx/conf:/etc/nginx/conf.d
+  - ./volumes/nginx/src:/usr/share/nginx/html
 
 kibana:
   image: docker.elastic.co/kibana/kibana:7.0.0

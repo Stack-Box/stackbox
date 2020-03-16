@@ -1,31 +1,8 @@
 services:
-  elasticsearch:
-    environment:
-    - discovery.type=single-node
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.0.0
+  nginx:
+    image: nginx:1.15-alpine
     ports:
-    - 9200:9200
-  flask:
-    build: ./flask
-    depends_on:
-    - mysql
-    - elasticsearch
-    ports:
-    - 80:80
-  mysql:
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-    image: mysql:5.7
-    ports:
-    - 3306:3306
+    - 81:80
     volumes:
-    - ./mysql:/docker-entrypoint-initdb.d/:ro
-  vue:
-    build: ./vue
-    depends_on:
-    - mysql
-    - elasticsearch
-    ports:
-    - 8080:8080
-    restart: on-failure
+    - ./volumes/nginx/src:/usr/share/nginx/html
 version: '3'

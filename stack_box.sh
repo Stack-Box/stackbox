@@ -13,7 +13,9 @@ python stack.py $args
 beginswith() { case $2 in "$1"*) true;; *) false;; esac; }
 
 docker-compose down > logs/docker-compose-down-log.txt
+echo "\n"
 docker-compose build > logs/docker-compose-build-log.txt
+echo "\n"
 docker-compose up -d --remove-orphans
 
 containers=$(docker ps --format '{{.Names}}')
@@ -31,6 +33,8 @@ do
 done
 
 i=-1
+
+echo "\n"
 
 for container in $containers;
 do
