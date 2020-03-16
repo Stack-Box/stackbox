@@ -9,6 +9,20 @@ Sets up a docker containers based infra. Generates a docker-compose.yml for serv
 
     sh stack_box.sh <client-name-1> <client-name-2> <service-name-1> <service-name-2> ...
     
+## Example:
+
+    sh stack_box.sh vue flask mysql
+ 
+ The above example brings up the following:
+ 
+ - mysql container 
+    - With a sample preloaded table
+ - flask backend container 
+    - with mysql client code
+    - endpoints configured to connect to mysql
+ - vue frontend 
+    - mysql table views connecting to flask backend
+    
 ## Supported Clients
 
 - vue
