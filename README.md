@@ -7,7 +7,7 @@ Sets up a docker containers based infra. Generates a docker-compose.yml for serv
 
 ## Run
 
-    sh stack.sh <client-name-1> <client-name-2> <service-name-1> <service-name-2> ...
+    sh stack_box.sh <client-name-1> <client-name-2> <service-name-1> <service-name-2> ...
     
 ## Supported Clients
 
