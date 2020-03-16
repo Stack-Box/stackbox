@@ -1,8 +1,0 @@
-services:
-  nginx:
-    image: nginx:1.15-alpine
-    ports:
-    - 81:80
-    volumes:
-    - ./volumes/nginx/src:/usr/share/nginx/html
-version: '3'
