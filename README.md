@@ -17,3 +17,4 @@ Create app stacks loaded with all your favourite clients, services and infra in 
 - mysql
 - elasticsearch
 - kibana
+- nginx
