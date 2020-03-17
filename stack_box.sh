@@ -8,9 +8,21 @@ echo '|___/\__\__,_|\___|_|\_\_.__/ \___/_/\_\'
 echo "\n"
 
 args="$*"
-python stack.py $args
 
 beginswith() { case $2 in "$1"*) true;; *) false;; esac; }
+
+python_version=$(python --version)
+python3_version=$(python3 --version)
+
+if beginswith "Python 3" "$python_version" ;
+then
+  python stack.py $args
+elif beginswith "Python 3" "$python3_version";
+then
+  python3 stack.py $args
+else
+  echo "Unable to find a python 3 installation"
+fi
 
 docker-compose down > logs/docker-compose-down-log.txt
 echo "\n"
