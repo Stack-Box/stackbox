@@ -1,0 +1,269 @@
+Step 1/7 : FROM python:3.6
+ ---> 971c66f6a27f
+Step 2/7 : EXPOSE 80
+ ---> Using cache
+ ---> bc09f6568d97
+Step 3/7 : WORKDIR /app
+ ---> Using cache
+ ---> 3ab52efaa91e
+Step 4/7 : COPY requirements.txt /app
+ ---> Using cache
+ ---> 3dc7c4c6ec1e
+Step 5/7 : RUN pip install -r requirements.txt
+ ---> Using cache
+ ---> 9db6bc727c7a
+Step 6/7 : COPY . /app
+ ---> Using cache
+ ---> 94fab9e51478
+Step 7/7 : CMD python app.py
+ ---> Using cache
+ ---> 28ff07f68d04
+Successfully built 28ff07f68d04
+Successfully tagged stackbox_flask:latest
+Step 1/9 : FROM node:lts-alpine
+ ---> 927d03058714
+Step 2/9 : RUN npm install -g http-server
+ ---> Using cache
+ ---> 09d8d1c75e02
+Step 3/9 : WORKDIR /app
+ ---> Using cache
+ ---> c7615f5bbc0b
+Step 4/9 : COPY package*.json ./
+ ---> Using cache
+ ---> 2780ae6e3cc6
+Step 5/9 : RUN npm install
+ ---> Running in 2024cca6bbf7
+
+> yorkie@2.0.0 install /app/node_modules/yorkie
+> node bin/install.js
+
+setting up Git hooks
+can't find .git directory, skipping Git hooks installation
+
+> core-js@2.6.11 postinstall /app/node_modules/@babel/polyfill/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+
+[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+[96m>[94m https://opencollective.com/core-js [0m
+[96m>[94m https://www.patreon.com/zloirock [0m
+
+[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+
+
+> core-js@2.6.11 postinstall /app/node_modules/babel-runtime/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+
+[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+[96m>[94m https://opencollective.com/core-js [0m
+[96m>[94m https://www.patreon.com/zloirock [0m
+
+[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+
+
+> core-js@3.6.4 postinstall /app/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+
+[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+[96m>[94m https://opencollective.com/core-js [0m
+[96m>[94m https://www.patreon.com/zloirock [0m
+
+[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+
+
+> ejs@2.7.4 postinstall /app/node_modules/ejs
+> node ./postinstall.js
+
+Thank you for installing [35mEJS[0m: built with the [32mJake[0m JavaScript build tool ([32mhttps://jakejs.com/[0m)
+
+
+> bootstrap-vue@2.7.0 postinstall /app/node_modules/bootstrap-vue
+> opencollective || exit 0
+
+                                                             
+                          ;iiiiiiiiiiSSSSSSSSiiiiiiiiii;     
+                          .rXXXXXXXXXrrrrrrrSXXXXXXXXXr.     
+                          :iXXXXXXXX2. ;;;;, r3XXXXXXXi;     
+                         ,rSSSSSXXXX2..sSSi: r3XXXSSSSSr,    
+                          ,siiiiS2XX2. :;;:,.rXX2Siiiis,     
+                           ,riiiii2X2..5XXXi .22iiiiir,      
+                            .riiiii22..::::,,r2iiiiir.       
+                             .riiiii5SSiiiiS22iiiiir.        
+                               ;iiiii5X3333X5iiiii;          
+                                :iiiiiSXXXXSiiiii:           
+                                 :siiiiSXXSiiiis:            
+                                  ,siiiiiiiiiis,             
+                                   .riiiiiiiir.              
+                                    .riiiiiir.               
+                                     .;iiii;.                
+                                       ;ii;                  
+                                        ::                   
+                                         
+                       Thanks for installing bootstrap-vue 
+                 Please consider donating to our open collective
+                        to help us maintain this package.
+                                         
+                           Number of contributors: 256
+                              Number of backers: 90
+                              Annual budget: $2,026
+                             Current balance: $2,125
+                                         
+              Donate: https://opencollective.com/bootstrap-vue/donate
+                                         
+[91mnpm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[0m[91m
+[0madded 1541 packages from 1090 contributors and audited 933818 packages in 56.653s
+
+43 packages are looking for funding
+  run `npm fund` for details
+
+found 615 moderate severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+Removing intermediate container 2024cca6bbf7
+ ---> 1e0f08302888
+Step 6/9 : COPY . .
+ ---> 29f5c11bdf1d
+Step 7/9 : RUN npm run build
+ ---> Running in b1868e8ee4e0
+
+> vue@0.1.0 build /app
+> vue-cli-service build
+
+
+[91m-  Building for production...
+[0m[91m
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the direct import of `core-js` or use `useBuiltIns: 'entry'` instead.
+[0m WARNING  Compiled with 7 warnings6:29:16 PM
+
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/app/src/components/Elasticsearch.vue
+   3:21  warning  Replace `⏎······:path="'res'"⏎······:data="data"⏎·····` with `·:path="'res'"·:data="data"`                                                  prettier/prettier
+  12:27  warning  Replace `'vue-json-pretty'` with `"vue-json-pretty";`                                                                                       prettier/prettier
+  13:19  warning  Replace `'axios'` with `"axios";`                                                                                                           prettier/prettier
+  16:9   warning  Replace `'Elasticsearch'` with `"Elasticsearch"`                                                                                            prettier/prettier
+  23:6   warning  Insert `;`                                                                                                                                  prettier/prettier
+  25:12  warning  Insert `·`                                                                                                                                  prettier/prettier
+  26:10  warning  Replace `.get('http://localhost:80/elasticsearch_view_stacks')` with `⏎······.get("http://localhost:80/elasticsearch_view_stacks")⏎······`  prettier/prettier
+  27:1   warning  Replace `······this.data·=·response.data.res` with `········this.data·=·response.data.res;`                                                 prettier/prettier
+  28:1   warning  Replace `····})` with `······});`                                                                                                           prettier/prettier
+  30:2   warning  Replace `⏎` with `;`                                                                                                                        prettier/prettier
+
+✖ 10 problems (0 errors, 10 warnings)
+  0 errors and 10 warnings potentially fixable with the `--fix` option.
+
+
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/app/src/components/HelloWorld.vue
+  14:11  warning  Replace `⏎··········href="http://localhost:8080/#/mysql"⏎··········target="_blank"⏎·········` with `·href="http://localhost:8080/#/mysql"·target="_blank"`  prettier/prettier
+
+✖ 1 problem (0 errors, 1 warning)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+
+
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/app/src/components/Mysql.vue
+   8:29  warning  Replace `'vue-table-dynamic'` with `"vue-table-dynamic";`                                         prettier/prettier
+   9:19  warning  Replace `'axios'` with `"axios";`                                                                 prettier/prettier
+  12:9   warning  Replace `'Mysql'` with `"Mysql"`                                                                  prettier/prettier
+  17:17  warning  Replace `'row'` with `"row"`                                                                      prettier/prettier
+  20:6   warning  Insert `;`                                                                                        prettier/prettier
+  22:12  warning  Insert `·`                                                                                        prettier/prettier
+  23:15  warning  Replace `'http://localhost:80/mysql_view_stacks'` with `"http://localhost:80/mysql_view_stacks"`  prettier/prettier
+  24:43  warning  Insert `;`                                                                                        prettier/prettier
+  25:7   warning  Insert `;`                                                                                        prettier/prettier
+  28:2   warning  Replace `⏎` with `;`                                                                              prettier/prettier
+
+✖ 10 problems (0 errors, 10 warnings)
+  0 errors and 10 warnings potentially fixable with the `--fix` option.
+
+
+You may use special comments to disable some warnings.
+Use // eslint-disable-next-line to ignore the next line.
+Use /* eslint-disable */ to ignore all warnings in a file.
+ warning  in ./src/router/index.js
+
+Module Warning (from ./node_modules/thread-loader/dist/cjs.js):
+
+/app/src/router/index.js
+   1:17  warning  Replace `'vue'` with `"vue";`                                                 prettier/prettier
+   2:20  warning  Replace `'vue-router'` with `"vue-router";`                                   prettier/prettier
+   3:24  warning  Replace `'@/components/HelloWorld'` with `"@/components/HelloWorld";`         prettier/prettier
+   4:19  warning  Replace `'@/components/Mysql'` with `"@/components/Mysql";`                   prettier/prettier
+   5:27  warning  Replace `'@/components/Elasticsearch'⏎` with `"@/components/Elasticsearch";`  prettier/prettier
+   8:16  warning  Insert `;`                                                                    prettier/prettier
+  13:13  warning  Replace `'/'` with `"/"`                                                      prettier/prettier
+  14:13  warning  Replace `'HelloWorld'` with `"HelloWorld"`                                    prettier/prettier
+  18:13  warning  Replace `'/mysql'` with `"/mysql"`                                            prettier/prettier
+  19:13  warning  Replace `'Mysql'` with `"Mysql"`                                              prettier/prettier
+  23:13  warning  Replace `'/elasticsearch'` with `"/elasticsearch"`                            prettier/prettier
+  24:13  warning  Replace `'Elasticsearch'` with `"Elasticsearch"`                              prettier/prettier
+  28:3   warning  Insert `;`                                                                    prettier/prettier
+
+✖ 13 problems (0 errors, 13 warnings)
+  0 errors and 13 warnings potentially fixable with the `--fix` option.
+
+
+ @ ./src/main.js 9:0-30 14:10-16
+ @ multi ./src/main.js
+
+ warning  
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  js/chunk-vendors.8d4af992.js (709 KiB)
+
+ warning  
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (952 KiB)
+      css/chunk-vendors.2a216af4.css
+      js/chunk-vendors.8d4af992.js
+      css/app.36b33782.css
+      js/app.28d1ccce.js
+
+
+ warning  
+
+webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  File                                      Size             Gzipped
+
+  dist/js/chunk-vendors.8d4af992.js         708.52 KiB       193.29 KiB
+  dist/js/app.28d1ccce.js                   6.52 KiB         2.33 KiB
+  dist/service-worker.js                    1.03 KiB         0.60 KiB
+  dist/precache-manifest.1129b0f0c822950    0.67 KiB         0.30 KiB
+  aaec5260d045aa5d3.js
+  dist/css/chunk-vendors.2a216af4.css       236.45 KiB       31.58 KiB
+  dist/css/app.36b33782.css                 0.42 KiB         0.26 KiB
+
+  Images and other types of assets omitted.
+
+ DONE  Build complete. The dist directory is ready to be deployed.
+ INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+      
+Removing intermediate container b1868e8ee4e0
+ ---> 6a8b9eb00fd8
+Step 8/9 : EXPOSE 8080
+ ---> Running in f57ee24d426a
+Removing intermediate container f57ee24d426a
+ ---> 21bf6fcaa1a2
+Step 9/9 : CMD [ "http-server", "dist" ]
+ ---> Running in df0ea467ceb6
+Removing intermediate container df0ea467ceb6
+ ---> 9c914934f9ba
+Successfully built 9c914934f9ba
+Successfully tagged stackbox_vue:latest

@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
     # Loads the master yaml containing docker service definitions
     with open('./master.yaml') as master_service_file:
-        master_services = yaml.load(master_service_file, Loader=yaml.FullLoader)
+        master_services = yaml.load(master_service_file)
 
     # Populates clients in docker-compose
     for client in clients:

@@ -20,7 +20,7 @@ export default {
     }
   },
   mounted(){
-    axios.get('http://localhost:80/view_stacks').then(response => {
+    axios.get('http://localhost:80/mysql_view_stacks').then(response => {
       this.params.data = response.data.res
     })
   },

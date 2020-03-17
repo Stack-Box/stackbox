@@ -9,6 +9,7 @@ class Config:
             with open(environment_file) as env_file:
                 self.env_list = yaml.load(env_file)
         self.__configure_mysql()
+        self.__configure_elasticsearch()
 
     def __configure_mysql(self):
         self.mysql_username = os.getenv('USERNAME', self.env_list['MYSQL']['USERNAME'])
@@ -16,4 +17,9 @@ class Config:
         self.mysql_db_name = os.getenv('DB_NAME', self.env_list['MYSQL']['DB_NAME'])
         self.mysql_host = os.getenv('HOST', self.env_list['MYSQL']['HOST'])
         self.mysql_port = os.getenv('PORT', self.env_list['MYSQL']['PORT'])
+
+    def __configure_elasticsearch(self):
+        self.es_host = os.getenv('HOST', self.env_list['ES']['HOST'])
+        self.es_port = os.getenv('PORT', self.env_list['ES']['PORT'])
+        self.es_index = os.getenv('INDEX', self.env_list['ES']['INDEX'])
 

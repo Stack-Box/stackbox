@@ -26,8 +26,7 @@ class SQLClient:
         self.mydb = mysql.connector.connect(**db_config)
 
     def fetch_all_stacks(self):
-        if self.mydb is None:
-            self.setup()
+        self.setup()
         cursor = self.mydb.cursor()
         cursor.execute(self.select_stacks_query)
         records = cursor.fetchall()
@@ -37,8 +36,7 @@ class SQLClient:
         return records
 
     def insert_into_stacks(self, name, image, build, port):
-        if self.mydb is None:
-            self.setup()
+        self.setup()
         cursor = self.mydb.cursor()
         try:
             query = 'INSERT INTO stacks VALUES("'+name+'", "'+image+'", "'+build+'", '+port+')'

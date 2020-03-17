@@ -2,7 +2,6 @@
 .idea
 *__pycache__/
 docker-compose.yml
-logs/
 .DS_Store
 vue/node_modules/
 vue/dist/
