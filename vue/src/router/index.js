@@ -4,19 +4,18 @@ import HelloWorld from '@/components/HelloWorld'
 import Mysql from '@/components/Mysql'
 import Elasticsearch from '@/components/Elasticsearch'
 
-
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
+      path: "/",
+      name: "HelloWorld",
       component: HelloWorld
     },
     {
-      path: '/mysql',
-      name: 'Mysql',
+      path: "/mysql",
+      name: "Mysql",
       component: Mysql
     },
     {
@@ -25,4 +24,4 @@ export default new Router({
       component: Elasticsearch
     }
   ]
-})
+});

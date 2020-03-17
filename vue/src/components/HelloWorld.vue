@@ -11,10 +11,7 @@
     <h3>Stackbox</h3>
     <ul>
       <li>
-        <a
-          href="http://localhost:8080/#/mysql"
-          target="_blank"
-          rel="noopener"
+        <a href="http://localhost:8080/#/mysql" target="_blank" rel="noopener"
           >MySQL</a
         >
       </li>

@@ -5,19 +5,19 @@
 </template>
 
 <script>
-import VueTableDynamic from 'vue-table-dynamic'
-import axios from 'axios'
+import VueTableDynamic from "vue-table-dynamic";
+import axios from "axios";
 
 export default {
-  name: 'Mysql',
+  name: "Mysql",
   data() {
     return {
       params: {
         data: null,
-        header: 'row',
+        header: "row",
         border: true
       }
-    }
+    };
   },
   mounted(){
     axios.get('http://localhost:80/mysql_view_stacks').then(response => {
@@ -25,6 +25,5 @@ export default {
     })
   },
   components: { VueTableDynamic }
-}
-
+};
 </script>
