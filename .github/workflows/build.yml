@@ -26,4 +26,5 @@ jobs:
     - name: Run a multi-line script
       run: |
         cd vue
+        npm install
         npm run build
