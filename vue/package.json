@@ -37,6 +37,7 @@
     "vue-template-compiler": "^2.6.11",
     "axios": "latest",
     "vue-table-dynamic": "latest",
+    "vue-json-pretty": "latest",
     "sass": "^1.19.0",
     "sass-loader": "^8.0.0",
     "vue-cli-plugin-bootstrap-vue": "^0.6.0"

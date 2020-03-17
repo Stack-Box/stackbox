@@ -15,6 +15,14 @@
           >MySQL</a
         >
       </li>
+      <li>
+        <a
+          href="http://localhost:8080/#/elasticsearch"
+          target="_blank"
+          rel="noopener"
+          >Elasticsearch</a
+        >
+      </li>
     </ul>
     <h3>Essential Links</h3>
     <ul>

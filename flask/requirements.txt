@@ -3,3 +3,4 @@ flask_cors
 Flask-API
 PyYAML
 mysql-connector
+elasticsearch

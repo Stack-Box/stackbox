@@ -5,3 +5,8 @@ MYSQL:
   HOST: mysql
   PORT: 3306
 
+ES:
+  INDEX: stacks
+  HOST: elasticsearch
+  PORT: 9200
+
