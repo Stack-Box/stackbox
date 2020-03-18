@@ -43,8 +43,13 @@ class ElasticsearchClient:
         for hit in res['hits']['hits']:
             print("_source: "+str(hit["_source"]))
 
-    def populate_index_from_mysql(self):
-        rows = self.sql_client.fetch_all_stacks()
+    def populate_index(self):
+        rows = [
+            ["mysql", "mysql:5.7", "none", "3306"],
+            ["elasticsearch", "docker.elastic.co/elasticsearch/elasticsearch:7.0.0", "none", "9200"],
+            ["kibana", "docker.elastic.co/kibana/kibana:7.0.0", "none", "5601"],
+            ["ui", "node:lts-alpine custom", "ui", "8081"]
+        ]
         i = 0
         for row in rows:
             i = i+1

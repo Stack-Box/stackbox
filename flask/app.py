@@ -29,8 +29,8 @@ def mysql_view_stacks():
 @app.route('/elasticsearch_view_stacks', methods=['GET'])
 def elasticsearch_view_stacks():
     res = es_client.match_all()
-    if res == 500:
-        es_client.populate_index_from_mysql()
+    if (not res) or (res == 500):
+        es_client.populate_index()
         res = es_client.match_all()
     return jsonify(JsonUtils.json_obj_to_array(res))
 

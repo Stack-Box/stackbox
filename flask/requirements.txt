@@ -4,3 +4,4 @@ Flask-API
 PyYAML
 mysql-connector
 elasticsearch
+kafka-python
