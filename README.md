@@ -1,4 +1,4 @@
-![CI](https://github.com/Stack-Box/StackBox/workflows/CI/badge.svg?branch=master)
+![Vue](https://github.com/Stack-Box/StackBox/workflows/CI/badge.svg?branch=master)
 
 # StackBox
 Create app stacks loaded with all your favourite clients, services and infra in under 5 mins.
