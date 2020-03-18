@@ -30,5 +30,4 @@ jobs:
     - name: Vue build
       run: |
         cd vue
-        npm ci
-        npm run build
+        docker build .
