@@ -6,6 +6,7 @@ from config.config import Config
 
 from client.mysql import SQLClient
 from client.elasticsearch import ElasticsearchClient
+from util.json_utils import JsonUtils
 import time
 
 app = Flask(__name__)
@@ -21,21 +22,17 @@ def hello_world():
 
 @app.route('/mysql_view_stacks', methods=['GET'])
 @cross_origin()
-def view_connection():
-    j = dict()
-    j['res'] = sql_client.fetch_all_stacks()
-    return jsonify(j)
+def mysql_view_stacks():
+    return jsonify(JsonUtils.array_to_json_array(sql_client.fetch_all_stacks()))
 
 
 @app.route('/elasticsearch_view_stacks', methods=['GET'])
-def search_full_text():
-    j = dict()
+def elasticsearch_view_stacks():
     res = es_client.match_all()
     if res == 500:
         es_client.populate_index_from_mysql()
         res = es_client.match_all()
-    j['res'] = res
-    return jsonify(j)
+    return jsonify(JsonUtils.json_obj_to_array(res))
 
 
 if __name__ == '__main__':

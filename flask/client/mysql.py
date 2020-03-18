@@ -48,4 +48,3 @@ class SQLClient:
         cursor.close()
         self.mydb.close()
         return 200
-
