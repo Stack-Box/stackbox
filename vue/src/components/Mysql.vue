@@ -108,7 +108,6 @@ export default {
         .get("http://localhost:80/mysql_view_stacks")
         .then(response => {
           this.items = response.data;
-          console.log(this.items);
         })
         .catch(e => {
           this.makeToast("danger", e.message);
