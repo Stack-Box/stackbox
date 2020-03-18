@@ -1,4 +1,4 @@
-![Vue](https://github.com/Stack-Box/StackBox/workflows/Vue/badge.svg)
+![Vue](https://github.com/Stack-Box/StackBox/workflows/Vue/badge.svg) ![Flask](https://github.com/Stack-Box/StackBox/workflows/Flask/badge.svg)
 
 # StackBox
 Create app stacks loaded with all your favourite clients, services and infra in under 5 mins.
