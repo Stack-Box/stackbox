@@ -12,7 +12,7 @@ class JsonUtils:
         arr = []
         for record in res:
             j = dict()
-            j['build'] = record[0]
+            j['name'] = record[0]
             j['image'] = record[1]
             j['build'] = record[2]
             j['port'] = record[3]
