@@ -36,5 +36,5 @@ Sets up a docker containers based infra. Generates a docker-compose.yml for serv
 - elasticsearch
 - kibana
 - nginx
-- kafka
+- kafka (BROKEN!! - https://github.com/Stack-Box/StackBox/issues/21)
 - zookeper
