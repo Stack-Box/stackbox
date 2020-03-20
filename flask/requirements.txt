@@ -5,3 +5,5 @@ PyYAML
 mysql-connector
 elasticsearch
 kafka-python
+Flask-Sockets
+Flask-SocketIO
