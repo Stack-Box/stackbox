@@ -21,7 +21,6 @@ while var == 1:
     c = (c + 1) % len(clients)
     s = (s + 1) % len(services)
     # send to topic on broker
-    producer.send('clients', value=client, key=num_bytes)
-    producer.send('services', value=service, key=num_bytes)
+    producer.send('stackbox1', value=client, key=num_bytes)
     # wait 1 second
     time.sleep(1)

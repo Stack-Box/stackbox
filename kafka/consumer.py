@@ -1,21 +1,21 @@
-from kafka import KafkaConsumer
+from kafka import KafkaConsumer, TopicPartition
 
-# continuous loop
-var = 1
-while var == 1:
+consumer = KafkaConsumer(group_id='consumer-1',
+                         bootstrap_servers='localhost:32770')
+tp = TopicPartition('stackbox1', 0)
+# register to the topic
+consumer.assign([tp])
 
-    # initialize consumer to given topic and broker
-    consumer1 = KafkaConsumer('services',
-                            group_id='consumer-1',
-                            bootstrap_servers='localhost:32770')
-    # consumer2 = KafkaConsumer('clients',
-    #                          group_id='consumer-1',
-    #                          bootstrap_servers='localhost:32770')
+# obtain the last offset value
+consumer.seek_to_end(tp)
+lastOffset = consumer.position(tp)
+print(lastOffset)
 
-    # loop and print messages
-    for msg in consumer1:
-        print (msg)
+consumer.seek_to_beginning(tp)
 
-    #     # loop and print messages
-    # for msg in consumer2:
-    #     print(msg)
+for message in consumer:
+    print("Offset:", message.offset)
+    print("Value:", message.value)
+    print(lastOffset)
+    if message.offset == lastOffset - 2:
+        break
