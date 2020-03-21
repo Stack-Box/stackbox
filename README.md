@@ -54,3 +54,27 @@ mysql is up at http://localhost:3306
 Now you can visit http://localhost:8080 to view the Vue frontend. From there you can click on Mysql/Elasticsearch links to view the preloaded data from mysql/elasticsearch containers being rendered.
 
 **Visit [Working](https://github.com/Stack-Box/StackBox/wiki/Working) or [Debugging](https://github.com/Stack-Box/StackBox/wiki/Debugging)  pages to know more about internal details.**
+
+## To be added Services and Clients
+
+📢 **Contributors needed!!** 📢
+
+**Aux Services**
+- [ ] Dynamo
+- [ ] S3
+- [ ] Postgres
+- [ ] CouchDB
+- [ ] MongoDB
+- [x] Kafka
+- [ ] Hadoop
+- [ ] Clients
+
+**Frontend clients**
+- [ ] Angular
+- [ ] React
+
+**Backend services**
+- [ ] Rails
+- [ ] Django
+- [ ] Springboot
+- [ ] Golang
