@@ -3,6 +3,8 @@
 # StackBox
 > Wiki is a good place to start!
 
+Stackbox helps you create app stacks loaded with all your favourite clients, services and infra in under 5 mins. The aim of the project is to help developers setup quick infra and boilerplates to start the dev work asap. Ideally this project is to help rapid prototyping, building PoCs or writing code for hackathons.
+
 1. [**About**](https://github.com/Stack-Box/StackBox/wiki)
 2. [**Get Started**](https://github.com/Stack-Box/StackBox/wiki/Get-started)
 3. [**Working**](https://github.com/Stack-Box/StackBox/wiki/Working)
@@ -20,7 +22,7 @@ Visit [Docker Page](https://www.docker.com/products/docker-desktop) to install D
 
 `sh stack_box.sh <client-1> <client-2> <service-1> <service-2>`
 
-Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/wiki/Get-started#1-flask-vue-mysql-elasticsearch) to quickly try a run
+Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/blob/master/README.md#example-stacks) to quickly try a run
 
 ## Support
 ### Supported Clients
@@ -58,4 +60,4 @@ mysql is up at http://localhost:3306
 
 Now you can visit http://localhost:8080 to view the Vue frontend. From there you can click on Mysql/Elasticsearch links to view the preloaded data from mysql/elasticsearch containers being rendered.
 
-**Visit Working or Debugging pages to know more about internal details.**
+**Visit [Working](https://github.com/Stack-Box/StackBox/wiki/Working) or [Debugging](https://github.com/Stack-Box/StackBox/wiki/Debugging)  pages to know more about internal details.**
