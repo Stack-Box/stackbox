@@ -11,13 +11,6 @@ Stackbox helps you create app stacks loaded with all your favourite clients, ser
 4. [**Debugging**](https://github.com/Stack-Box/StackBox/wiki/Debugging)
 
 # Get Started
-## Pre-requisities
-
-### 1. Docker
-Visit [Docker Page](https://www.docker.com/products/docker-desktop) to install Docker for desktop. 
-
-**NOTE:** _Docker by default is installed with 2GB memory. To have multiple services like mysql and elastic search running in docker, minimum 6-8GB memory will be required. This can be set in Docker preferences/resources._
-
 ## Run
 
 `sh stack_box.sh <client-1> <client-2> <service-1> <service-2>`
