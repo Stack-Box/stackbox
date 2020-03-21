@@ -1,6 +1,11 @@
 <template>
-  <div>
-    <vue-json-pretty :path="'res'" :data="data" @click="handleClick">
+  <div class="container json-content" align="left">
+    <vue-json-pretty
+      :highlightMouseoverNode="true"
+      :showLine="true"
+      :path="'res'"
+      :data="data"
+    >
     </vue-json-pretty>
   </div>
 </template>
@@ -23,8 +28,15 @@ export default {
     axios
       .get("http://localhost:80/elasticsearch_view_stacks")
       .then(response => {
-        this.data = response.data.res;
+        this.data = response.data;
       });
   }
 };
 </script>
+
+<style scoped>
+.json-content {
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+</style>
