@@ -16,9 +16,11 @@ python3_version=$(python3 --version)
 
 if beginswith "Python 3" "$python_version" ;
 then
+  pip install -r requirements.txt
   python stack.py $args
 elif beginswith "Python 3" "$python3_version";
 then
+  pip3 install -r requirements.txt
   python3 stack.py $args
 else
   echo "Unable to find a python 3 installation"
