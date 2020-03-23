@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 import yaml
 import sys
+import netifaces as ni
+
+ni.ifaddresses('en0')
+ip = ni.ifaddresses('en0')[ni.AF_INET][0]['addr']
 
 # List of clients
 CLIENTS = ['flask', 'vue']
@@ -26,7 +30,6 @@ if __name__ == '__main__':
     for client in clients:
         if client in master_services:
             COMPOSITION['services'][client] = master_services[client]
-            COMPOSITION['services'][client]['depends_on'] = []
         else:
             error_clients.append(client)
             CLIENTS.remove(client)
@@ -39,9 +42,13 @@ if __name__ == '__main__':
             COMPOSITION['services'][service] = master_services[service]
         else:
             error_services.append(service)
+        if service == 'kafka':
+            COMPOSITION['services'][service]['environment']['KAFKA_ADVERTISED_HOST_NAME'] = ip
+
 
     with open('docker-compose.yml', 'w') as outfile:
         yaml.dump(COMPOSITION, outfile, default_flow_style=False, indent=2)
+
 
     if len(error_services) > 0:
         print("Couldn't add the following services: ")
