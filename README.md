@@ -8,6 +8,9 @@
         <img src="https://github.com/Stack-Box/StackBox/workflows/Flask/badge.svg" /></a>
   <a href="https://stackboxworkspace.slack.com/" alt="Slack">
         <img src="https://img.shields.io/badge/slack-@stackboxworkspace-purple.svg?logo=slack" /></a>
+<a href="https://github.com/Stack-Box/StackBox/graphs/contributors" alt="Contributors">
+        <img src="https://img.shields.io/github/contributors/badges/shields" /></a>
+
  </p>
  
  <br/>
@@ -72,7 +75,7 @@ Now you can visit http://localhost:8080 to view the Vue frontend. From there you
 
 **Aux Services**
 - [ ] Dynamo
-- [ ] S3
+- [x] S3
 - [ ] Postgres
 - [ ] CouchDB
 - [ ] MongoDB
