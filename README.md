@@ -1,9 +1,20 @@
-![Vue](https://github.com/Stack-Box/StackBox/workflows/Vue/badge.svg) ![Flask](https://github.com/Stack-Box/StackBox/workflows/Flask/badge.svg)
-
-# StackBox
-> Wiki is a good place to start!
+<h1 align="center">
+  StackBox
+</h1>
+<p align="center">
+  <a href="https://github.com/Stack-Box/StackBox/workflows/Vue" alt="Vue">
+        <img src="https://github.com/Stack-Box/StackBox/workflows/Vue/badge.svg" /></a>
+  <a href="https://github.com/Stack-Box/StackBox/workflows/Flask/" alt="Flask">
+        <img src="https://github.com/Stack-Box/StackBox/workflows/Flask/badge.svg" /></a>
+  <a href="https://stackboxworkspace.slack.com/" alt="Slack">
+        <img src="https://img.shields.io/badge/slack-@stackboxworkspace-purple.svg?logo=slack" /></a>
+ </p>
+ 
+ <br/>
 
 Stackbox helps you create app stacks loaded with all your favourite clients, services and infra in under 5 mins. The aim of the project is to help developers setup quick infra and boilerplates to start the dev work asap. Ideally this project is to help rapid prototyping, building PoCs or writing code for hackathons.
+
+> Wiki is a good place to start!
 
 1. [**About**](https://github.com/Stack-Box/StackBox/wiki)
 2. [**Get Started**](https://github.com/Stack-Box/StackBox/wiki/Get-started)
