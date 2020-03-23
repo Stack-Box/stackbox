@@ -4,9 +4,16 @@ MYSQL:
   DB_NAME: stackbox
   HOST: mysql
   PORT: 3306
+  TABLE_NAME: stacks
+  COLUMN_NAMES: name,image,build,port
 
 ES:
   INDEX: stacks
   HOST: elasticsearch
   PORT: 9200
+
+KAFKA:
+  HOST: kafka
+  PORT: 9200
+  TOPIC: stackbox
 
