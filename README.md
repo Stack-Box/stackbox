@@ -1,4 +1,5 @@
-![Vue](https://github.com/Stack-Box/StackBox/workflows/Vue/badge.svg) ![Flask](https://github.com/Stack-Box/StackBox/workflows/Flask/badge.svg)
+![Vue](https://github.com/Stack-Box/StackBox/workflows/Vue/badge.svg) ![Flask](https://github.com/Stack-Box/StackBox/workflows/Flask/badge.svg) [![Slack](https://img.shields.io/badge/slack-@stackboxworkspace-purple.svg?logo=slack
+)](https://stackboxworkspace.slack.com/)
 
 # StackBox
 > Wiki is a good place to start!
