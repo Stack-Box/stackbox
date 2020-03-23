@@ -1,13 +1,11 @@
 from elasticsearch import Elasticsearch
 from config.config import Config
-from client.mysql import SQLClient
 
 
 class ElasticsearchClient:
 
     def __init__(self, config: Config):
         self.es = Elasticsearch([config.es_host], port=config.es_port)
-        self.sql_client = SQLClient(config)
         self.index = config.es_index
 
     def index_es(self, doc_id, doc):

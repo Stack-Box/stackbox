@@ -1,13 +1,11 @@
-import csv
-
 from config.config import Config
 import mysql.connector
 
 
-class SQLClient:
+class MysqlClient:
 
     def __init__(self, config: Config):
-        self.select_stacks_query = "SELECT * FROM stacks"
+        self.select_all_query = "SELECT * FROM"
         self.user = config.mysql_username
         self.password = config.mysql_password
         self.port = config.mysql_port
@@ -25,21 +23,28 @@ class SQLClient:
         }
         self.mydb = mysql.connector.connect(**db_config)
 
-    def fetch_all_stacks(self):
+    def select_all(self, table_name):
         self.setup()
+        query = self.select_all_query + ' ' + table_name + ' ;'
         cursor = self.mydb.cursor()
-        cursor.execute(self.select_stacks_query)
+        cursor.execute(query)
         records = cursor.fetchall()
         self.mydb.commit()
         cursor.close()
         self.mydb.close()
         return records
 
-    def insert_into_stacks(self, name, image, build, port):
+    def insert_into_stacks(self, table_name, column_values):
         self.setup()
         cursor = self.mydb.cursor()
+        query = 'INSERT INTO ' + table_name + ' VALUES( '
+        for column_value in column_values:
+            if isinstance(column_value, str):
+                query = query + '"' + column_value + '"' + ', '
+            else:
+                query = query + column_value + ', '
+        query = query[:-2] + ');'
         try:
-            query = 'INSERT INTO stacks VALUES("'+name+'", "'+image+'", "'+build+'", '+port+')'
             print(query)
             cursor.execute(query)
         except:

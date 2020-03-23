@@ -7,3 +7,5 @@ elasticsearch
 kafka-python
 Flask-Sockets
 Flask-SocketIO
+flask_api
+boto3
