@@ -8,6 +8,8 @@ vue:
   restart: on-failure
   ports:
     - "8080:8080"
+  volumes:
+    - ./vue/node_modules:/app/node_modules
 
 mysql:
   image: mysql:5.7
@@ -40,7 +42,6 @@ kibana:
 
 kafka:
   environment:
-    KAFKA_ADVERTISED_HOST_NAME: 192.168.43.238
     KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
   image: wurstmeister/kafka
   ports:
@@ -52,3 +53,10 @@ zookeeper:
   image: wurstmeister/zookeeper
   ports:
     - "2182:2181"
+
+rubyonrails:
+  build: ./rubyonrails
+  ports:
+    - "80:3000"
+  volumes:
+    - "./rubyonrails:/app"

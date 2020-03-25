@@ -14,6 +14,6 @@ ES:
 
 KAFKA:
   HOST: kafka
-  PORT: 9200
+  PORT: 9092
   TOPIC: stackbox
 
