@@ -5,6 +5,8 @@
   <a href="https://github.com/Stack-Box/StackBox/workflows/Vue" alt="Vue">
         <img src="https://github.com/Stack-Box/StackBox/workflows/Vue/badge.svg" /></a>
   <a href="https://github.com/Stack-Box/StackBox/workflows/Flask/" alt="Flask">
+        <img src="https://github.com/Stack-Box/StackBox/workflows/Rails/badge.svg" /></a>
+  <a href="https://github.com/Stack-Box/StackBox/workflows/Rails/" alt="Rails">
         <img src="https://github.com/Stack-Box/StackBox/workflows/Flask/badge.svg" /></a>
   <a href="https://stackboxworkspace.slack.com/" alt="Slack">
         <img src="https://img.shields.io/badge/slack-@stackboxworkspace-purple.svg?logo=slack" /></a>
@@ -33,6 +35,7 @@ Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/blob/master
 
 - vue
 - flask
+- rubyonrails
 
 ### Supported Services
 
@@ -40,8 +43,9 @@ Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/blob/master
 - elasticsearch
 - kibana
 - nginx
-- kafka (BROKEN!! - https://github.com/Stack-Box/StackBox/issues/21)
+- kafka
 - zookeper
+- s3
 
 ## Example Stacks
 
@@ -85,7 +89,7 @@ Now you can visit http://localhost:8080 to view the Vue frontend. From there you
 - [ ] React
 
 **Backend services**
-- [ ] Rails
+- [x] Rails
 - [ ] Django
 - [ ] Springboot
 - [ ] Golang
