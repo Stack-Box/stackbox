@@ -30,21 +30,12 @@ Stackbox helps you create app stacks loaded with all your favourite clients, ser
 Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/blob/master/README.md#example-stacks) to quickly try a run
 
 ## Support
-### Supported Clients
 
-- vue
-- flask
-- rubyonrails
-
-### Supported Services
-
-- mysql
-- elasticsearch
-- kibana
-- nginx
-- kafka
-- zookeper
-- s3
+| Clients/Services | mysql | elasticsearch | kibana | nginx | kafka | zookeper | s3 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **flask** | ✅ | ✅ | na | na | ✅ | na | ✅ |
+| **vue** | ✅ | ✅ | na | na | ❌ | na | ❌ |
+| **rails** | ✅ | ❌ | na | na | ❌ | na | ❌ |
 
 ## Example Stacks
 
