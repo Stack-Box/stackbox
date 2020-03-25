@@ -78,7 +78,6 @@ Now you can visit http://localhost:8080 to view the Vue frontend. From there you
 - [ ] MongoDB
 - [x] Kafka
 - [ ] Hadoop
-- [ ] Clients
 
 **Frontend clients**
 - [ ] Angular
