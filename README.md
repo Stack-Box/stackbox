@@ -54,7 +54,7 @@ The following is a list of example stacks you could spin-up using Stackbox and q
 ### 1. Flask-Vue-Mysql-Elasticsearch
 #### Run
 
-`sh stack_box.sh flask vue mysql elasticsearch`
+`sh stack_box.sh`
 
 #### Test
 After the run is finished, the final log should look like the one below.
