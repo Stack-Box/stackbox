@@ -17,13 +17,14 @@ if __name__ == '__main__':
     error_clients = []
     error_services = []
     args = sys.argv[1:]
+    args = list(dict.fromkeys(args))
 
     services = [x for x in args if x not in CLIENTS]
     clients = [x for x in args if x in CLIENTS]
 
     # Loads the master yaml containing docker service definitions
     with open('./master.yaml') as master_service_file:
-        master_services = yaml.load(master_service_file)
+        master_services = yaml.load(master_service_file, Loader=yaml.FullLoader)
 
     # Populates clients in docker-compose
     for client in clients:
