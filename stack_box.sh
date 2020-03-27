@@ -11,6 +11,23 @@ echo "######## SELECT YOUR STACK #############\n"
 
 stack=()
 
+PS3='Select your frontend: '
+
+echo "FRONTEND OPTIONS:"
+
+frontend_options=("Vue")
+select opt in "${frontend_options[@]}"
+do
+    case $opt in
+        "Vue")
+            echo "You've chosen Vue"
+            stack+=("vue")
+            break;
+            ;;
+        *) echo "Invalid option $REPLY";;
+    esac
+done
+
 PS3='Select your backend: '
 
 echo "BACKEND OPTIONS:"
@@ -24,12 +41,12 @@ do
             stack+=("flask")
             break;
             ;;
-        "Option 2")
+        "Rails")
             echo "You've chosen Rails"
             stack+=("rubyonrails")
             break;
             ;;
-        *) echo "invalid option $REPLY";;
+        *) echo "Invalid option $REPLY";;
     esac
 done
 
@@ -76,7 +93,7 @@ do
         "Done")
             break
             ;;
-        *) echo "invalid option $REPLY";;
+        *) echo "Invalid option $REPLY";;
     esac
 done
 
