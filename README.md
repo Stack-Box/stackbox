@@ -1,17 +1,23 @@
 <h1 align="center">
   StackBox
 </h1>
+
 <p align="center">
   <a href="https://github.com/Stack-Box/StackBox/workflows/Vue" alt="Vue">
         <img src="https://github.com/Stack-Box/StackBox/workflows/Vue/badge.svg" /></a>
   <a href="https://github.com/Stack-Box/StackBox/workflows/Flask/" alt="Flask">
-        <img src="https://github.com/Stack-Box/StackBox/workflows/Rails/badge.svg" /></a>
-  <a href="https://github.com/Stack-Box/StackBox/workflows/Rails/" alt="Rails">
         <img src="https://github.com/Stack-Box/StackBox/workflows/Flask/badge.svg" /></a>
+  <a href="https://github.com/Stack-Box/StackBox/workflows/Rails/" alt="Rails">
+        <img src="https://github.com/Stack-Box/StackBox/workflows/Rails/badge.svg" /></a>
   <a href="https://stackboxworkspace.slack.com/" alt="Slack">
         <img src="https://img.shields.io/badge/slack-@stackboxworkspace-purple.svg?logo=slack" /></a>
+  </br>
+  </br>
+  
+  <a href="https://github.com/Stack-Box/StackBox#to-be-added-services-and-clients"/>
+  📢 Contributors needed!! 📢
+  </a>
  </p>
- 
  <br/>
 
 Stackbox helps you create app stacks loaded with all your favourite clients, services and infra in under 5 mins. The aim of the project is to help developers setup quick infra and boilerplates to start the dev work asap. Ideally this project is to help rapid prototyping, building PoCs or writing code for hackathons.
@@ -31,21 +37,12 @@ Stackbox helps you create app stacks loaded with all your favourite clients, ser
 Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/blob/master/README.md#example-stacks) to quickly try a run
 
 ## Support
-### Supported Clients
 
-- vue
-- flask
-- rubyonrails
-
-### Supported Services
-
-- mysql
-- elasticsearch
-- kibana
-- nginx
-- kafka
-- zookeper
-- s3
+| Clients/Services | mysql | elasticsearch | kibana | nginx | kafka | zookeper | s3 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **flask** | ✅ | ✅ | na | na | ✅ | na | ✅ |
+| **vue** | ✅ | ✅ | na | na | ❌ | na | ❌ |
+| **rails** | ✅ | ❌ | na | na | ❌ | na | ❌ |
 
 ## Example Stacks
 
@@ -76,13 +73,12 @@ Now you can visit http://localhost:8080 to view the Vue frontend. From there you
 
 **Aux Services**
 - [ ] Dynamo
-- [ ] S3
+- [x] S3
 - [ ] Postgres
 - [ ] CouchDB
 - [ ] MongoDB
 - [x] Kafka
 - [ ] Hadoop
-- [ ] Clients
 
 **Frontend clients**
 - [ ] Angular
