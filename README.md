@@ -55,7 +55,7 @@ The following is a list of example stacks you could spin-up using Stackbox and q
 
 `sh stack_box.sh`
 
-Choose flask for backend. Choose mysql and elasticsearch (with/without kibana) for services.
+Choose vue for frontend, flask for backend. Choose mysql and elasticsearch (with/without kibana) for services.
 
 #### Test
 After the run is finished, the final log should look like the one below.
