@@ -7,9 +7,10 @@ echo "\__ \ || (_| | (__|   <| |_) | (_) >  <"
 echo '|___/\__\__,_|\___|_|\_\_.__/ \___/_/\_\'
 echo "\n"
 
-echo "######## SELECT YOUR STACK #############\n"
+echo "######## SELECT YOUR STACK #############"
 
 stack=()
+installationPath=$(brew --cellar stackbox)/$(brew info --json stackbox | jq -r '.[0].installed[0].version')
 
 PS3='Select your frontend: '
 
@@ -102,7 +103,7 @@ printf "The services you've chosen are:  "
 echo "${stack[*]}"
 printf "\n"
 
-echo "######## BUILDING YOUR STACK ###############\n"
+echo "######## BUILDING YOUR STACK ###############"
 
 beginswith() { case $2 in "$1"*) true;; *) false;; esac; }
 
@@ -111,26 +112,26 @@ python3_version=$(python3 --version)
 
 if beginswith "Python 3" "$python_version" ;
 then
-  var="$(pip --disable-pip-version-check install -r ../requirements.txt) > /dev/null "
+  var="$(pip --disable-pip-version-check install -r $installationPath/requirements.txt) > /dev/null "
   python ../stack.py ${stack[*]}
 elif beginswith "Python 3" "$python3_version";
 then
-  var="$(pip3  --disable-pip-version-check install -r ../requirements.txt) > /dev/null"
+  var="$(pip3  --disable-pip-version-check install -r $installationPath/requirements.txt) > /dev/null"
   python3 ../stack.py ${stack[*]}
 else
   echo "Unable to find a python 3 installation"
 fi
 
-docker-compose -f ../docker-compose.yml down 2> /dev/null > logs/docker-compose-down-log.txt
-docker-compose -f ../docker-compose.yml build > logs/docker-compose-build-log.txt
+docker-compose -f $installationPath/docker-compose.yml down 2> /dev/null > logs/docker-compose-down-log.txt
+docker-compose -f $installationPath/docker-compose.yml build > logs/docker-compose-build-log.txt
 
-echo "\n######## DEPLOYING YOUR STACK ##############\n"
+echo "######## DEPLOYING YOUR STACK ##############"
 
-docker-compose -f ../docker-compose.yml up -d --remove-orphans
+docker-compose -f $installationPath/docker-compose.yml up -d --remove-orphans
 
 sleep 5
 
-echo "\n######## YOUR STACK ########################\n"
+echo "######## YOUR STACK ########################"
 
 containers=$(docker ps --format '{{.Names}}')
 ports="$(docker ps --format '{{.Ports}}')"
@@ -161,4 +162,9 @@ do
   fi
 done
 
-echo "\n"
+
+echo "######## SETTING YOUR CODE DIRECTORY #############"
+
+mkdir stackbox
+cp -r $installationPath/. stackbox/
+echo "Your code is in ./stackbox"
