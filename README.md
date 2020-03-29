@@ -32,7 +32,7 @@ Stackbox helps you create app stacks loaded with all your favourite clients, ser
 # Get Started
 ## Run
 
-`sh stack_box.sh`
+`sh stackbox.sh`
 
 Follow the menu options to select clients and services for your stack.
 
@@ -53,7 +53,7 @@ The following is a list of example stacks you could spin-up using Stackbox and q
 ### 1. Flask-Vue-Mysql-Elasticsearch
 #### Run
 
-`sh stack_box.sh`
+`sh stackbox.sh`
 
 Choose vue for frontend, flask for backend. Choose mysql and elasticsearch (with/without kibana) for services.
 
