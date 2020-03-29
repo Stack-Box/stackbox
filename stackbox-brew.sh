@@ -7,6 +7,7 @@ echo "\__ \ || (_| | (__|   <| |_) | (_) >  <"
 echo '|___/\__\__,_|\___|_|\_\_.__/ \___/_/\_\'
 printf "\n"
 echo "######## SELECT YOUR STACK #############"
+printf "\n"
 
 stack=()
 installationPath=$(brew --cellar stackbox)/$(brew info --json stackbox | jq -r '.[0].installed[0].version')
@@ -28,6 +29,7 @@ do
     esac
 done
 
+printf "\n"
 PS3='Select your backend: '
 
 echo "BACKEND OPTIONS:"
@@ -112,11 +114,11 @@ python3_version=$(python3 --version)
 if beginswith "Python 3" "$python_version" ;
 then
   var="$(pip --disable-pip-version-check install -r $installationPath/requirements.txt) > /dev/null "
-  python $installationPath/stack.py ${stack[*]}
+  python $installationPath/stack.py $installationPath ${stack[*]}
 elif beginswith "Python 3" "$python3_version";
 then
   var="$(pip3  --disable-pip-version-check install -r $installationPath/requirements.txt) > /dev/null"
-  python3 $installationPath/stack.py ${stack[*]}
+  python3 $installationPath/stack.py $installationPath ${stack[*]}
 else
   echo "Unable to find a python 3 installation"
 fi
@@ -133,6 +135,7 @@ sleep 5
 
 printf "\n"
 echo "######## YOUR STACK ########################"
+printf "\n"
 
 containers=$(docker ps --format '{{.Names}}')
 ports="$(docker ps --format '{{.Ports}}')"
@@ -165,6 +168,7 @@ done
 
 printf "\n"
 echo "######## SETTING YOUR CODE DIRECTORY #############"
+printf "\n"
 
 mkdir stackbox
 cp -r $installationPath/. stackbox/
