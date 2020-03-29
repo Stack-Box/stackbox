@@ -1,6 +1,6 @@
 ---
-name: Custom issue template
-about: Describe this issue template's purpose here.
+name: Bug fix
+about: Use this template to raise bug issues
 title: ''
 labels: ''
 assignees: ''
@@ -9,7 +9,6 @@ assignees: ''
 
 **Description:**
 Describe issue
-
 
 **Example:**
 Give examples or ways to reproduce
