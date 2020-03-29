@@ -132,13 +132,13 @@ else
   echo "Unable to find a python 3 installation"
 fi
 
-docker-compose -f srcPath/docker-compose.yml down 2> /dev/null > srcPath/logs/docker-compose-down-log.txt
-docker-compose -f srcPath/docker-compose.yml build > srcPath/logs/docker-compose-build-log.txt
+docker-compose -f $srcPath/docker-compose.yml down 2> /dev/null > $srcPath/logs/docker-compose-down-log.txt
+docker-compose -f $srcPath/docker-compose.yml build > $srcPath/logs/docker-compose-build-log.txt
 
 printf "\n"
 echo "######## DEPLOYING YOUR STACK ##############"
 
-docker-compose -f srcPath/docker-compose.yml up -d --remove-orphans
+docker-compose -f $srcPath/docker-compose.yml up -d --remove-orphans
 
 sleep 5
 
