@@ -37,8 +37,13 @@ Stackbox helps you create app stacks loaded with all your favourite clients, ser
 ```
 brew tap Stack-Box/tap
 brew install stackbox
+```
+**Run**
+
+```
 stackbox
 ```
+
 Creates a folder names `stackbox` in the current directory with all source.
 
 ### From source
