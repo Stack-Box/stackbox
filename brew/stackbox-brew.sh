@@ -104,6 +104,15 @@ printf "The services you've chosen are:  "
 echo "${stack[*]}"
 printf "\n"
 
+echo "######## SETTING YOUR CODE DIRECTORY #############"
+printf "\n"
+
+srcPath=$(pwd)"/stackbox/"
+
+mkdir $srcPath
+cp -r $installationPath/. $srcPath
+echo "Your code is in ./"$srcPath
+
 echo "######## BUILDING YOUR STACK ###############"
 
 beginswith() { case $2 in "$1"*) true;; *) false;; esac; }
@@ -113,23 +122,23 @@ python3_version=$(python3 --version)
 
 if beginswith "Python 3" "$python_version" ;
 then
-  var="$(pip --disable-pip-version-check install -r $installationPath/requirements.txt) > /dev/null "
-  python $installationPath/brew/stack-brew.py $installationPath ${stack[*]}
+  var="$(pip --disable-pip-version-check install -r $srcPath/requirements.txt) > /dev/null "
+  python $srcPath/brew/stack-brew.py $srcPath ${stack[*]}
 elif beginswith "Python 3" "$python3_version";
 then
-  var="$(pip3  --disable-pip-version-check install -r $installationPath/requirements.txt) > /dev/null"
-  python3 $installationPath/brew/stack-brew.py $installationPath ${stack[*]}
+  var="$(pip3  --disable-pip-version-check install -r $srcPath/requirements.txt) > /dev/null"
+  python3 $srcPath/brew/stack-brew.py $srcPath ${stack[*]}
 else
   echo "Unable to find a python 3 installation"
 fi
 
-docker-compose -f $installationPath/docker-compose.yml down 2> /dev/null > $installationPath/logs/docker-compose-down-log.txt
-docker-compose -f $installationPath/docker-compose.yml build > $installationPath/logs/docker-compose-build-log.txt
+docker-compose -f srcPath/docker-compose.yml down 2> /dev/null > srcPath/logs/docker-compose-down-log.txt
+docker-compose -f srcPath/docker-compose.yml build > srcPath/logs/docker-compose-build-log.txt
 
 printf "\n"
 echo "######## DEPLOYING YOUR STACK ##############"
 
-docker-compose -f $installationPath/docker-compose.yml up -d --remove-orphans
+docker-compose -f srcPath/docker-compose.yml up -d --remove-orphans
 
 sleep 5
 
@@ -165,11 +174,3 @@ do
     fi
   fi
 done
-
-printf "\n"
-echo "######## SETTING YOUR CODE DIRECTORY #############"
-printf "\n"
-
-mkdir stackbox
-cp -r $installationPath/. stackbox/
-echo "Your code is in ./stackbox"

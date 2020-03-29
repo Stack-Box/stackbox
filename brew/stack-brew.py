@@ -16,7 +16,7 @@ if __name__ == '__main__':
 
     error_clients = []
     error_services = []
-    installation_path = sys.argv[1]
+    src_path = sys.argv[1]
     args = sys.argv[2:]
     args = list(dict.fromkeys(args))
 
@@ -24,7 +24,7 @@ if __name__ == '__main__':
     clients = [x for x in args if x in CLIENTS]
 
     # Loads the master yaml containing docker service definitions
-    with open(installation_path+'/master.yaml') as master_service_file:
+    with open(src_path+'/master.yaml') as master_service_file:
         master_services = yaml.load(master_service_file, Loader=yaml.FullLoader)
 
     # Populates clients in docker-compose
@@ -47,7 +47,7 @@ if __name__ == '__main__':
         if service == 'kafka':
             COMPOSITION['services'][service]['environment']['KAFKA_ADVERTISED_HOST_NAME'] = ip
 
-    with open(installation_path+'/docker-compose.yml', 'w') as outfile:
+    with open(src_path+'/docker-compose.yml', 'w') as outfile:
         yaml.dump(COMPOSITION, outfile, default_flow_style=False, indent=2)
 
     if len(error_services) > 0:
