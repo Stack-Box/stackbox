@@ -32,7 +32,20 @@ Stackbox helps you create app stacks loaded with all your favourite clients, ser
 # Get Started
 ## Run
 
-`sh stackbox.sh`
+### Brew installation
+
+```
+brew tap Stack-Box/tap
+brew install stackbox
+stackbox
+```
+Creates a folder names `stackbox` in the current directory with all source.
+
+### From source
+
+```
+sh stackbox.sh
+```
 
 Follow the menu options to select clients and services for your stack.
 
@@ -53,7 +66,11 @@ The following is a list of example stacks you could spin-up using Stackbox and q
 ### 1. Flask-Vue-Mysql-Elasticsearch
 #### Run
 
-`sh stackbox.sh`
+Run from source - `sh stackbox.sh` 
+
+or
+
+Run from Brew installation -  `stackbox`
 
 Choose vue for frontend, flask for backend. Choose mysql and elasticsearch (with/without kibana) for services.
 
