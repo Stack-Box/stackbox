@@ -111,9 +111,12 @@ srcPath=$(pwd)"/stackbox/"
 
 mkdir $srcPath
 cp -r $installationPath/. $srcPath
-echo "Your code is in ./"$srcPath
+echo "Your code is in "$srcPath
+printf "\n"
 
 echo "######## BUILDING YOUR STACK ###############"
+printf "\n"
+
 
 beginswith() { case $2 in "$1"*) true;; *) false;; esac; }
 
@@ -137,6 +140,8 @@ docker-compose -f $srcPath/docker-compose.yml build > $srcPath/logs/docker-compo
 
 printf "\n"
 echo "######## DEPLOYING YOUR STACK ##############"
+printf "\n"
+
 
 docker-compose -f $srcPath/docker-compose.yml up -d --remove-orphans
 
@@ -174,3 +179,4 @@ do
     fi
   fi
 done
+printf "\n"
