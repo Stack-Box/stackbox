@@ -5,8 +5,7 @@ echo " ___| |_ __ _  ___| | _| |__   _____  __"
 echo "/ __| __/ _  |/ __| |/ / '_ \ / _ \ \/ /"
 echo "\__ \ || (_| | (__|   <| |_) | (_) >  <"
 echo '|___/\__\__,_|\___|_|\_\_.__/ \___/_/\_\'
-echo "\n"
-
+printf "\n"
 echo "######## SELECT YOUR STACK #############"
 
 stack=()
@@ -113,11 +112,11 @@ python3_version=$(python3 --version)
 if beginswith "Python 3" "$python_version" ;
 then
   var="$(pip --disable-pip-version-check install -r $installationPath/requirements.txt) > /dev/null "
-  python ../stack.py ${stack[*]}
+  python $installationPath/stack.py ${stack[*]}
 elif beginswith "Python 3" "$python3_version";
 then
   var="$(pip3  --disable-pip-version-check install -r $installationPath/requirements.txt) > /dev/null"
-  python3 ../stack.py ${stack[*]}
+  python3 $installationPath/stack.py ${stack[*]}
 else
   echo "Unable to find a python 3 installation"
 fi
@@ -125,12 +124,14 @@ fi
 docker-compose -f $installationPath/docker-compose.yml down 2> /dev/null > logs/docker-compose-down-log.txt
 docker-compose -f $installationPath/docker-compose.yml build > logs/docker-compose-build-log.txt
 
+printf "\n"
 echo "######## DEPLOYING YOUR STACK ##############"
 
 docker-compose -f $installationPath/docker-compose.yml up -d --remove-orphans
 
 sleep 5
 
+printf "\n"
 echo "######## YOUR STACK ########################"
 
 containers=$(docker ps --format '{{.Names}}')
@@ -162,7 +163,7 @@ do
   fi
 done
 
-
+printf "\n"
 echo "######## SETTING YOUR CODE DIRECTORY #############"
 
 mkdir stackbox
