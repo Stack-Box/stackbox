@@ -32,7 +32,7 @@ Stackbox helps you create app stacks loaded with all your favourite clients, ser
 # Get Started
 ## Run
 
-`sh stack_box.sh <client-1> <client-2> <service-1> <service-2>`
+`sh stackbox.sh`
 
 Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/blob/master/README.md#example-stacks) to quickly try a run
 
@@ -51,7 +51,7 @@ The following is a list of example stacks you could spin-up using Stackbox and q
 ### 1. Flask-Vue-Mysql-Elasticsearch
 #### Run
 
-`sh stack_box.sh`
+`sh stackbox.sh`
 
 #### Test
 After the run is finished, the final log should look like the one below.
