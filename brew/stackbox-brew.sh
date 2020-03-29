@@ -114,17 +114,17 @@ python3_version=$(python3 --version)
 if beginswith "Python 3" "$python_version" ;
 then
   var="$(pip --disable-pip-version-check install -r $installationPath/requirements.txt) > /dev/null "
-  python $installationPath/stack.py $installationPath ${stack[*]}
+  python $installationPath/brew/stack-brew.py $installationPath ${stack[*]}
 elif beginswith "Python 3" "$python3_version";
 then
   var="$(pip3  --disable-pip-version-check install -r $installationPath/requirements.txt) > /dev/null"
-  python3 $installationPath/stack.py $installationPath ${stack[*]}
+  python3 $installationPath/brew/stack-brew.py $installationPath ${stack[*]}
 else
   echo "Unable to find a python 3 installation"
 fi
 
-docker-compose -f $installationPath/docker-compose.yml down 2> /dev/null > logs/docker-compose-down-log.txt
-docker-compose -f $installationPath/docker-compose.yml build > logs/docker-compose-build-log.txt
+docker-compose -f $installationPath/docker-compose.yml down 2> /dev/null > $installationPath/logs/docker-compose-down-log.txt
+docker-compose -f $installationPath/docker-compose.yml build > $installationPath/logs/docker-compose-build-log.txt
 
 printf "\n"
 echo "######## DEPLOYING YOUR STACK ##############"
