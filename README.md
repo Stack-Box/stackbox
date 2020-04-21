@@ -107,7 +107,7 @@ Now you can visit http://localhost:8080 to view the Vue frontend. From there you
 - [ ] Hadoop
 
 **Frontend clients**
-- [ ] Angular
+- [x] Angular
 - [ ] React
 
 **Backend services**
