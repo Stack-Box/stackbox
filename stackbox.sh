@@ -15,13 +15,18 @@ PS3='Select your frontend: '
 
 echo "FRONTEND OPTIONS:"
 
-frontend_options=("Vue")
+frontend_options=("Vue" "Angular")
 select opt in "${frontend_options[@]}"
 do
     case $opt in
         "Vue")
             echo "You've chosen Vue"
             stack+=("vue")
+            break;
+            ;;
+        "Angular")
+            echo "You've chosen Angular"
+            stack+=("angular")
             break;
             ;;
         *) echo "Invalid option $REPLY";;
