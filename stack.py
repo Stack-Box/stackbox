@@ -7,7 +7,7 @@ ni.ifaddresses('en0')
 ip = ni.ifaddresses('en0')[ni.AF_INET][0]['addr']
 
 # List of clients
-CLIENTS = ['flask', 'vue', 'rubyonrails']
+CLIENTS = ['flask', 'vue', 'rubyonrails', 'angular']
 
 # docker-compose.yml skeleton to fill out using "service" entries above.
 COMPOSITION = {'version': '3', 'services': {}}
