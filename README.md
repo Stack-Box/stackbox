@@ -3,13 +3,13 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/Stack-Box/StackBox/workflows/Vue" alt="Vue">
+  <a href="https://github.com/Stack-Box/stackbox/actions?query=workflow%3AVue" alt="Vue">
         <img src="https://github.com/Stack-Box/stackBox/workflows/Vue/badge.svg" /></a>
-  <a href="https://github.com/Stack-Box/StackBox/workflows/Angular" alt="Vue">
+  <a href="https://github.com/Stack-Box/stackbox/actions?query=workflow%3AAngular" alt="Angular">
           <img src="https://github.com/Stack-Box/stackBox/workflows/Angular/badge.svg" /></a>
-  <a href="https://github.com/Stack-Box/StackBox/workflows/Flask/" alt="Flask">
+  <a href="https://github.com/Stack-Box/stackbox/actions?query=workflow%3AFlask" alt="Flask">
         <img src="https://github.com/Stack-Box/stackBox/workflows/Flask/badge.svg" /></a>
-  <a href="https://github.com/Stack-Box/StackBox/workflows/Rails/" alt="Rails">
+  <a href="https://github.com/Stack-Box/stackbox/actions?query=workflow%3ARails" alt="Rails">
         <img src="https://github.com/Stack-Box/stackbox/workflows/Rails/badge.svg" /></a>
   <a href="https://stackboxworkspace.slack.com/" alt="Slack">
         <img src="https://img.shields.io/badge/slack-@stackboxworkspace-purple.svg?logo=slack" /></a>
