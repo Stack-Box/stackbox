@@ -15,11 +15,12 @@ module.exports = {
     },
     sourceType: "module",
   },
-  plugins: ["react", "react-hooks"],
+  plugins: ["react", "react-hooks", "jest"],
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:jest/recommended"
   ],
   settings: {
     react: {
