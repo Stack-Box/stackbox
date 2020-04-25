@@ -20,6 +20,16 @@ angular:
   ports:
     - '4201:4200'
 
+react:
+  build:
+    context: ./react
+  volumes:
+    - './react:/app'
+    - '/app/node_modules'
+  ports:
+    - '3000:3000'
+  stdin_open: true
+
 mysql:
   image: mysql:5.7
   ports:
