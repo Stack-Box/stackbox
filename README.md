@@ -117,6 +117,6 @@ Now you can visit http://localhost:8080 to view the Vue frontend. From there you
 - [ ] Springboot
 - [ ] Golang
 
-## Help and Support
- <a href="https://stackboxworkspace.slack.com/" alt="Slack">
+## Contributors Slack
+ <a href="https://join.slack.com/t/stackboxworkspace/shared_invite/zt-e5ye1rsg-fLJLy2NeTe6s1nG_3yKU_Q" alt="Slack">
         <img src="https://img.shields.io/badge/slack-@stackboxworkspace-purple.svg?logo=slack" /></a>
