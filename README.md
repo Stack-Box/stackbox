@@ -30,6 +30,7 @@ Stackbox helps you create app stacks loaded with all your favourite clients, ser
 4. [**Debugging**](https://github.com/Stack-Box/StackBox/wiki/Debugging)
 
 # Get Started
+
 ## Run
 
 ### Brew installation
@@ -38,6 +39,7 @@ Stackbox helps you create app stacks loaded with all your favourite clients, ser
 brew tap Stack-Box/tap
 brew install stackbox
 ```
+
 **Run**
 
 ```
@@ -64,15 +66,17 @@ Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/blob/master
 | **Rails** | ✅ | ❌ | na | na | ❌ | na | ❌ |
 | **Vue** | ✅ | ✅ | na | na | ❌ | na | ❌ |
 | **Angular** | ✅ | ✅ | na | na | ❌ | na | ❌ |
+| **React** | ✅ | ✅ | na | na | ❌ | na | ❌ |
 
 ## Example Stacks
 
 The following is a list of example stacks you could spin-up using Stackbox and quickly get-started with your development.
 
 ### 1. Flask-Vue-Mysql-Elasticsearch
+
 #### Run
 
-Run from source - `sh stackbox.sh` 
+Run from source - `sh stackbox.sh`
 
 or
 
@@ -81,6 +85,7 @@ Run from Brew installation -  `stackbox`
 Choose vue for frontend, flask for backend. Choose mysql and elasticsearch (with/without kibana) for services.
 
 #### Test
+
 After the run is finished, the final log should look like the one below.
 
 ```
@@ -90,7 +95,7 @@ elasticsearch is up at http://localhost:9200
 mysql is up at http://localhost:3306
 ```
 
-Now you can visit http://localhost:8080 to view the Vue frontend. From there you can click on Mysql/Elasticsearch links to view the preloaded data from mysql/elasticsearch containers being rendered.
+Now you can visit <http://localhost:8080> to view the Vue frontend. From there you can click on Mysql/Elasticsearch links to view the preloaded data from mysql/elasticsearch containers being rendered.
 
 **Visit [Working](https://github.com/Stack-Box/StackBox/wiki/Working) or [Debugging](https://github.com/Stack-Box/StackBox/wiki/Debugging)  pages to know more about internal details.**
 
@@ -99,6 +104,7 @@ Now you can visit http://localhost:8080 to view the Vue frontend. From there you
 📢 **Contributors needed!!** 📢
 
 **Aux Services**
+
 - [ ] Dynamo
 - [x] S3
 - [ ] Postgres
@@ -108,15 +114,18 @@ Now you can visit http://localhost:8080 to view the Vue frontend. From there you
 - [ ] Hadoop
 
 **Frontend clients**
+
 - [x] Angular
-- [ ] React
+- [x] React
 
 **Backend services**
+
 - [x] Rails
 - [ ] Django
 - [ ] Springboot
 - [ ] Golang
 
 ## Help and Support
+
  <a href="https://stackboxworkspace.slack.com/" alt="Slack">
         <img src="https://img.shields.io/badge/slack-@stackboxworkspace-purple.svg?logo=slack" /></a>
