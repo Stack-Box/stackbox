@@ -24,10 +24,11 @@ react:
   build:
     context: ./react
   volumes:
-    - '.:/app'
+    - './react:/app'
     - '/app/node_modules'
   ports:
     - '3000:3000'
+  stdin_open: true
 
 mysql:
   image: mysql:5.7
