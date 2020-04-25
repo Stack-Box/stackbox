@@ -7,6 +7,8 @@
         <img src="https://github.com/Stack-Box/stackBox/workflows/Vue/badge.svg" /></a>
   <a href="https://github.com/Stack-Box/stackbox/actions?query=workflow%3AAngular" alt="Angular">
           <img src="https://github.com/Stack-Box/stackBox/workflows/Angular/badge.svg" /></a>
+  <a href="https://github.com/Stack-Box/stackbox/actions?query=workflow%3AReact" alt="React">
+          <img src="https://github.com/Stack-Box/stackBox/workflows/React/badge.svg" /></a>
   <a href="https://github.com/Stack-Box/stackbox/actions?query=workflow%3AFlask" alt="Flask">
         <img src="https://github.com/Stack-Box/stackBox/workflows/Flask/badge.svg" /></a>
   <a href="https://github.com/Stack-Box/stackbox/actions?query=workflow%3ARails" alt="Rails">
@@ -63,13 +65,13 @@ Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/blob/master
 
 ## Support
 
-| Clients/Services | Mysql | Elasticsearch | Kibana | Nginx | Kafka | Zookeper | S3 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| **Flask** | ✅ | ✅ | na | na | ✅ | na | ✅ |
-| **Rails** | ✅ | ❌ | na | na | ❌ | na | ❌ |
-| **Vue** | ✅ | ✅ | na | na | ❌ | na | ❌ |
-| **Angular** | ✅ | ✅ | na | na | ❌ | na | ❌ |
-| **React** | ❌ | ❌ | na | na | ❌ | na | ❌ |
+| Clients/Services | Mysql | Elasticsearch | Kibana | Nginx | Kafka | Zookeper | S3  |
+| ---------------- | ----- | ------------- | ------ | ----- | ----- | -------- | --- |
+| **Flask**        | ✅     | ✅             | na     | na    | ✅     | na       | ✅   |
+| **Rails**        | ✅     | ❌             | na     | na    | ❌     | na       | ❌   |
+| **Vue**          | ✅     | ✅             | na     | na    | ❌     | na       | ❌   |
+| **Angular**      | ✅     | ✅             | na     | na    | ❌     | na       | ❌   |
+| **React**        | ❌     | ❌             | na     | na    | ❌     | na       | ❌   |
 
 ## Example Stacks
 
