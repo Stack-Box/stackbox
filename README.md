@@ -11,12 +11,15 @@
         <img src="https://github.com/Stack-Box/stackBox/workflows/Flask/badge.svg" /></a>
   <a href="https://github.com/Stack-Box/stackbox/actions?query=workflow%3ARails" alt="Rails">
         <img src="https://github.com/Stack-Box/stackbox/workflows/Rails/badge.svg" /></a>
-  </br>
-  </br>
-  
-  <a href="https://github.com/Stack-Box/StackBox#to-be-added-services-and-clients"/>
-  📢 Contributors needed!! 📢
+ </p>
+ <p align="center">
+  <a href="https://github.com/Stack-Box/stackbox/issues" alt="Contributions">
+    <img src="https://img.shields.io/badge/contributions-welcome-blue.svg?style=flat" /></a>
+    <a href="https://github.com/Stack-Box/stackbox/labels/good%20first%20issue" alt="Good First Issue">
+      <img src="https://img.shields.io/github/issues/Stack-Box/stackbox/good%20first%20issue" /></a>
   </a>
+   <a href="https://join.slack.com/t/stackboxworkspace/shared_invite/zt-e5ye1rsg-fLJLy2NeTe6s1nG_3yKU_Q" alt="Slack">
+          <img src="https://img.shields.io/badge/slack-chat-purple.svg?logo=slack" /></a>
  </p>
  <br/>
 
@@ -66,7 +69,7 @@ Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/blob/master
 | **Rails** | ✅ | ❌ | na | na | ❌ | na | ❌ |
 | **Vue** | ✅ | ✅ | na | na | ❌ | na | ❌ |
 | **Angular** | ✅ | ✅ | na | na | ❌ | na | ❌ |
-| **React** | ✅ | ✅ | na | na | ❌ | na | ❌ |
+| **React** | ❌ | ❌ | na | na | ❌ | na | ❌ |
 
 ## Example Stacks
 
@@ -124,8 +127,3 @@ Now you can visit <http://localhost:8080> to view the Vue frontend. From there y
 - [ ] Django
 - [ ] Springboot
 - [ ] Golang
-
-## Help and Support
-
- <a href="https://stackboxworkspace.slack.com/" alt="Slack">
-        <img src="https://img.shields.io/badge/slack-@stackboxworkspace-purple.svg?logo=slack" /></a>
