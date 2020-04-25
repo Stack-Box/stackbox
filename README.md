@@ -18,7 +18,7 @@
     <a href="https://github.com/Stack-Box/stackbox/labels/good%20first%20issue" alt="Good First Issue">
       <img src="https://img.shields.io/github/issues/Stack-Box/stackbox/good%20first%20issue" /></a>
   </a>
-   <a href="https://stackboxworkspace.slack.com/" alt="Slack">
+   <a href="https://join.slack.com/t/stackboxworkspace/shared_invite/zt-e5ye1rsg-fLJLy2NeTe6s1nG_3yKU_Q" alt="Slack">
           <img src="https://img.shields.io/badge/slack-chat-purple.svg?logo=slack" /></a>
  </p>
  <br/>
