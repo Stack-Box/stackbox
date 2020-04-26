@@ -75,32 +75,38 @@ Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/blob/master
 
 ## Example Stacks
 
-The following is a list of example stacks you could spin-up using Stackbox and quickly get-started with your development.
+The following are a few example stacks you could spin-up.
+
+Run from source - `sh stackbox.sh` or Run from Brew installation -  `stackbox`
 
 ### 1. Flask-Vue-Mysql-Elasticsearch
 
-#### Run
-
-Run from source - `sh stackbox.sh`
-
-or
-
-Run from Brew installation -  `stackbox`
-
 Choose vue for frontend, flask for backend. Choose mysql and elasticsearch (with/without kibana) for services.
-
-#### Test
-
 After the run is finished, the final log should look like the one below.
-
 ```
 flask is up at http://localhost:80
 vue is up at http://localhost:8080
 elasticsearch is up at http://localhost:9200
 mysql is up at http://localhost:3306
 ```
-
 Now you can visit <http://localhost:8080> to view the Vue frontend. From there you can click on Mysql/Elasticsearch links to view the preloaded data from mysql/elasticsearch containers being rendered.
+
+![](https://drive.google.com/open?id=1oDUk_DnPWj6J0yCZJIwVyTL2rgPqDiHF)
+
+
+### 2. Flask-Angular-Mysql-Elasticsearch
+
+Choose vue for frontend, flask for backend. Choose mysql and elasticsearch (with/without kibana) for services.
+After the run is finished, the final log should look like the one below.
+```
+flask is up at http://localhost:80
+angular is up at http://localhost:4200
+elasticsearch is up at http://localhost:9200
+mysql is up at http://localhost:3306
+```
+Now you can visit <http://localhost:4200> to view the Vue frontend. From there you can click on Mysql/Elasticsearch links to view the preloaded data from mysql/elasticsearch containers being rendered.
+
+![](https://drive.google.com/open?id=1jhCdbpN_RqvtxHeL5fUSRNJFIF9s51WW)
 
 **Visit [Working](https://github.com/Stack-Box/StackBox/wiki/Working) or [Debugging](https://github.com/Stack-Box/StackBox/wiki/Debugging)  pages to know more about internal details.**
 

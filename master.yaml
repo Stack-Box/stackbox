@@ -18,7 +18,7 @@ angular:
     - '.:/app'
     - '/app/node_modules'
   ports:
-    - '4201:4200'
+    - '4200:4200'
 
 react:
   build:
@@ -79,3 +79,4 @@ rubyonrails:
     - "80:3000"
   volumes:
     - "./rubyonrails:/app"
+    - '/app/node_modules'
