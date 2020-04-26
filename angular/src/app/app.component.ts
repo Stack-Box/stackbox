@@ -7,6 +7,10 @@ import * as _ from 'lodash';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  clientHeight: number;
+  constructor() {
+    this.clientHeight = window.innerHeight;
+  }
 }
 
 
