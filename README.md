@@ -91,8 +91,7 @@ mysql is up at http://localhost:3306
 ```
 Now you can visit <http://localhost:8080> to view the Vue frontend. From there you can click on Mysql/Elasticsearch links to view the preloaded data from mysql/elasticsearch containers being rendered.
 
-![](https://drive.google.com/open?id=1oDUk_DnPWj6J0yCZJIwVyTL2rgPqDiHF)
-
+![](https://drive.google.com/uc?export=view&id=1jhCdbpN_RqvtxHeL5fUSRNJFIF9s51WW)
 
 ### 2. Flask-Angular-Mysql-Elasticsearch
 
@@ -106,7 +105,7 @@ mysql is up at http://localhost:3306
 ```
 Now you can visit <http://localhost:4200> to view the Vue frontend. From there you can click on Mysql/Elasticsearch links to view the preloaded data from mysql/elasticsearch containers being rendered.
 
-![](https://drive.google.com/open?id=1jhCdbpN_RqvtxHeL5fUSRNJFIF9s51WW)
+![](https://drive.google.com/uc?export=view&id=1oDUk_DnPWj6J0yCZJIwVyTL2rgPqDiHF)
 
 **Visit [Working](https://github.com/Stack-Box/StackBox/wiki/Working) or [Debugging](https://github.com/Stack-Box/StackBox/wiki/Debugging)  pages to know more about internal details.**
 
