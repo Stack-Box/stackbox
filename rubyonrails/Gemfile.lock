@@ -92,7 +92,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
-    puma (4.3.3)
+    puma (4.3.5)
       nio4r (~> 2.0)
     rack (2.2.2)
     rack-cors (1.1.1)
@@ -184,7 +184,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.4.4)
-  puma (~> 4.1)
+  puma (~> 4.3)
   rack-cors
   rails (~> 6.0.2, >= 6.0.2.2)
   sass-rails (>= 6)
