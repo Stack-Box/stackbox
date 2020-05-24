@@ -38,6 +38,17 @@ mysql:
     MYSQL_ROOT_PASSWORD: root
   volumes:
     - ./volumes/mysql:/docker-entrypoint-initdb.d/:ro
+    
+mongodb:
+  image: 'mongo'
+  container_name: 'mongo-container'
+  environment:
+    - MONGO_INITDB_DATABASE='stackbox'
+  volumes:
+    - ./volumes/mongo/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    - ./mongo-volume:/data/db
+  ports:
+    - '27017:27017'
 
 elasticsearch:
   image: docker.elastic.co/elasticsearch/elasticsearch:7.0.0
