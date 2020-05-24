@@ -73,6 +73,11 @@ do
             stack+=("mysql")
             continue;
             ;;
+        "MongoDB")
+            echo "You've chosen MongoDB"
+            stack+=("mongodb")
+            continue;
+            ;;
         "Kafka")
             echo "You've chosen Kafka. Zookeper will also be set up."
             stack+=("kafka")
