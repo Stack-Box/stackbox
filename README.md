@@ -73,6 +73,11 @@ Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/blob/master
 | **Angular**      | ✅     | ✅            | ❌    | ❌   |
 | **React**        | ❌     | ❌            | ❌    | ❌   |
 
+Other containers that you can bring up:
+  1. nginx
+  2. kibana
+  3. kafka + zookeeper (*there's a kafka handler support for put/get messages in flask*)
+  
 ## Example Stacks
 
 The following are a few example stacks you could spin-up.
