@@ -65,13 +65,13 @@ Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/blob/master
 
 ## Support
 
-| Clients/Services | Mysql | Elasticsearch | Kibana | Nginx | Kafka | Zookeper | S3  |
-| ---------------- | ----- | ------------- | ------ | ----- | ----- | -------- | --- |
-| **Flask**        | ✅     | ✅             | na     | na    | ✅     | na       | ✅   |
-| **Rails**        | ✅     | ❌             | na     | na    | ❌     | na       | ❌   |
-| **Vue**          | ✅     | ✅             | na     | na    | ❌     | na       | ❌   |
-| **Angular**      | ✅     | ✅             | na     | na    | ❌     | na       | ❌   |
-| **React**        | ❌     | ❌             | na     | na    | ❌     | na       | ❌   |
+| Clients/Services | Mysql | Elasticsearch | MongoDB | S3   |
+| ---------------- | ----- | ------------  | --------| ---- |
+| **Flask**        | ✅     | ✅            | ❌    | ✅   |
+| **Rails**        | ✅     | ❌            | ❌    | ❌   |
+| **Vue**          | ✅     | ✅            | ❌    | ❌   |
+| **Angular**      | ✅     | ✅            | ❌    | ❌   |
+| **React**        | ❌     | ❌            | ❌    | ❌   |
 
 ## Example Stacks
 
@@ -115,29 +115,3 @@ Now you can visit <http://localhost:4200> to view the Vue frontend. From there y
 </p>
 
 **Visit [Working](https://github.com/Stack-Box/StackBox/wiki/Working) or [Debugging](https://github.com/Stack-Box/StackBox/wiki/Debugging)  pages to know more about internal details.**
-
-## To be added Services and Clients
-
-📢 **Contributors needed!!** 📢
-
-**Aux Services**
-
-- [ ] Dynamo
-- [x] S3
-- [ ] Postgres
-- [ ] CouchDB
-- [ ] MongoDB
-- [x] Kafka
-- [ ] Hadoop
-
-**Frontend clients**
-
-- [x] Angular
-- [x] React
-
-**Backend services**
-
-- [x] Rails
-- [ ] Django
-- [ ] Springboot
-- [ ] Golang
