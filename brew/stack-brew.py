@@ -7,7 +7,7 @@ ni.ifaddresses('en0')
 ip = ni.ifaddresses('en0')[ni.AF_INET][0]['addr']
 
 # List of clients
-CLIENTS = ['flask', 'vue', 'rubyonrails', 'angular', 'react']
+CLIENTS = ['flask', 'vue', 'rubyonrails']
 
 # docker-compose.yml skeleton to fill out using "service" entries above.
 COMPOSITION = {'version': '3', 'services': {}}
@@ -16,14 +16,15 @@ if __name__ == '__main__':
 
     error_clients = []
     error_services = []
-    args = sys.argv[1:]
+    src_path = sys.argv[1]
+    args = sys.argv[2:]
     args = list(dict.fromkeys(args))
 
     services = [x for x in args if x not in CLIENTS]
     clients = [x for x in args if x in CLIENTS]
 
     # Loads the master yaml containing docker service definitions
-    with open('./master.yaml') as master_service_file:
+    with open(src_path+'master.yaml') as master_service_file:
         master_services = yaml.load(master_service_file, Loader=yaml.FullLoader)
 
     # Populates clients in docker-compose
@@ -46,7 +47,7 @@ if __name__ == '__main__':
         if service == 'kafka':
             COMPOSITION['services'][service]['environment']['KAFKA_ADVERTISED_HOST_NAME'] = ip
 
-    with open('docker-compose.yml', 'w') as outfile:
+    with open(src_path+'docker-compose.yml', 'w') as outfile:
         yaml.dump(COMPOSITION, outfile, default_flow_style=False, indent=2)
 
     if len(error_services) > 0:
