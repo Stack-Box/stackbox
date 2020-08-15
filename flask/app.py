@@ -10,6 +10,7 @@ from util.json_utils import JsonUtils
 from handler.s3 import S3Handler
 from handler.kafka import KafkaHandler
 from handler.mysql import MysqlHandler
+from handler.dynamodb import DynamoDBHandler
 
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
@@ -98,6 +99,30 @@ def s3_view_object():
     req_body = request.get_json()
     s3_handler = S3Handler(req_body["access_key_id"], req_body["access_key"], req_body["bucket"], req_body["region"])
     return jsonify(s3_handler.get_object(req_body["object_key"]))
+
+
+"""
+Dynamo GET endpoint
+"""
+@app.route('/dynamodb_get_items', methods=['GET'])
+@cross_origin()
+def s3_view_object():
+    req_body = request.get_json()
+    req_params = request.params.get_json()
+    dynamodb_handler = DynamoDBHandler(req_body["access_key_id"], req_body["access_key"], req_body["region"])
+    return jsonify(dynamodb_handler.get_dynamodb_items(req_params["table"]))
+
+"""
+Dynamo PUT endpoints
+"""
+@app.route('/dynamodb_put_item', methods=['POST'])
+@cross_origin()
+def s3_view_object():
+    req_body = request.get_json()
+    req_params = request.params.get_json()
+    dynamodb_handler = DynamoDBHandler(req_body["access_key_id"], req_body["access_key"], req_body["region"])
+    return jsonify(dynamodb_handler.put_dynamodb_item(req_params["table"],req_body["data"]))
+
 
 
 if __name__ == '__main__':
