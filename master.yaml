@@ -92,3 +92,8 @@ rubyonrails:
   volumes:
     - "./rubyonrails:/app"
     - '/app/node_modules'
+
+golang:
+  build: ./golang
+  ports:
+    - "8081:8080"
