@@ -96,4 +96,4 @@ rubyonrails:
 golang:
   build: ./golang
   ports:
-    - "8081:8080"
+    - "3001:8080"
