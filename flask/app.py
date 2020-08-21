@@ -106,7 +106,7 @@ Dynamo GET endpoint
 """
 @app.route('/dynamodb_get_items', methods=['GET'])
 @cross_origin()
-def s3_view_object():
+def dynamodb_view_object():
     req_body = request.get_json()
     req_params = request.params.get_json()
     dynamodb_handler = DynamoDBHandler(req_body["access_key_id"], req_body["access_key"], req_body["region"])
@@ -117,7 +117,7 @@ Dynamo PUT endpoints
 """
 @app.route('/dynamodb_put_item', methods=['POST'])
 @cross_origin()
-def s3_view_object():
+def dynamodb_view_object():
     req_body = request.get_json()
     req_params = request.params.get_json()
     dynamodb_handler = DynamoDBHandler(req_body["access_key_id"], req_body["access_key"], req_body["region"])
