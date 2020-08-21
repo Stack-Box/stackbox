@@ -13,6 +13,8 @@
         <img src="https://github.com/Stack-Box/stackBox/workflows/Flask/badge.svg" /></a>
   <a href="https://github.com/Stack-Box/stackbox/actions?query=workflow%3ARails" alt="Rails">
         <img src="https://github.com/Stack-Box/stackbox/workflows/Rails/badge.svg" /></a>
+     <a href="https://github.com/Stack-Box/stackbox/actions?query=workflow%3AGolang" alt="Golang">
+        <img src="https://github.com/Stack-Box/stackbox/workflows/Golang/badge.svg" /></a>
  </p>
  <p align="center">
   <a href="https://github.com/Stack-Box/stackbox/issues" alt="Contributions">
@@ -65,13 +67,13 @@ Jump to [_**example-stacks**_](https://github.com/Stack-Box/StackBox/blob/master
 
 ## Support
 
-| Clients/Services | Mysql | Elasticsearch | MongoDB | S3   |
-| ---------------- | ----- | ------------  | --------| ---- |
-| **Flask**        | ✅     | ✅            | ❌    | ✅   |
-| **Rails**        | ✅     | ❌            | ❌    | ❌   |
-| **Vue**          | ✅     | ✅            | ❌    | ❌   |
-| **Angular**      | ✅     | ✅            | ❌    | ❌   |
-| **React**        | ❌     | ❌            | ❌    | ❌   |
+| Clients/Services | Mysql | Elasticsearch | MongoDB | S3   | DynamoDB  |
+| ---------------- | ----- | ------------  | --------| ---- | ----------|
+| **Flask**        | ✅     | ✅            | ❌    | ✅   |    ✅   |
+| **Rails**        | ✅     | ❌            | ❌    | ❌   |    ❌   |
+| **Vue**          | ✅     | ✅            | ❌    | ❌   |    ❌   |
+| **Angular**      | ✅     | ✅            | ❌    | ❌   |    ❌   |
+| **React**        | ❌     | ❌            | ❌    | ❌   |    ❌   |
 
 Other containers that you can bring up:
   1. nginx
